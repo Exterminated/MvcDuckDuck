@@ -1,0 +1,56 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<header>
+    <h2>duckDuckGo
+        <img src="images/duckduckgo-logo.png"></h2>
+    <style>
+        h2 {
+            font-size: 28px;
+            background: #ee2c2c;
+            color: #fff;
+            width: 750px;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 5px;
+        }
+    </style>
+
+</header>
+<div>
+    <h3>
+        <p align="center">Страница поиска </p>
+    </h3>
+    <form method="post" action="/">
+
+        <table style="margin: 0 auto">
+            <tr>
+                <td>
+                    <input type="text" style="width: 465px" name="search" />
+                    <input type="submit" value="" style="background-image: url(images/i.jpg); width: 40px; height: 40px" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Результат:</p>
+                    
+                    <p><textarea rows="15" cols="75" name="text">@ViewBag.Result</textarea></p>
+                    
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<footer>
+    <h4>Все права защищены</h4>
+    <style>
+        h4 {
+            clear: left; /* возвращаем блочность и располагаем слой слева */
+            padding: 10px; /* Внутренние поля вокруг содержимого */
+            background: #ee2c2c;
+            color: #fff;
+            width: 750px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
+</footer>
