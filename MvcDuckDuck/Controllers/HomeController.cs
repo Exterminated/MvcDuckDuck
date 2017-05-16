@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Threading.Tasks;
-using MvcDuckDuck;
-using System.Text.RegularExpressions;
 
 namespace MvcDuckDuck.Controllers
 {
@@ -38,17 +28,11 @@ namespace MvcDuckDuck.Controllers
 
             List<string> htmlClean = new List<string>();
             string res = "";
-            //Regex rg = new Regex("([ ]*)|((\\n)*)");
             html = ParserModel.getRequestResults();
             foreach (string value in html)
             {
-                //string tmp = value.Replace("&nbsp;", "").Trim();
-                //if (tmp != "" && tmp != "\n")
-                //    res += tmp + "\n";
                 res += value;
             }
-            //resultTextBox.Text = my_client.sendRequest(url_str);
-
             //должен браться из модели
             ViewBag.Result = res;
 

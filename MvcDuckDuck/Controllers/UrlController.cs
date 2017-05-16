@@ -1,22 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MvcDuckDuck.Controllers
+﻿namespace MvcDuckDuck.Controllers
 {
     public class UrlController : HomeController
     {
-        //
-        // GET: /Url/
-
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
+       
 
         public string _searchString;
         public string _searchParams;
@@ -24,10 +10,9 @@ namespace MvcDuckDuck.Controllers
 
         public UrlController() { }
 
-        public UrlController(string input /*int input_params*/)
+        public UrlController(string input)
         {
-            _searchString = generateSearchString(input);
-            //_searchParams = generateParams(input_params);            
+            _searchString = generateSearchString(input);          
         }
         public string ResultURL
         {
