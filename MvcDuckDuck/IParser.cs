@@ -7,6 +7,7 @@ namespace MvcDuckDuck
 {
     public class IParser
     {
+        public IParser() { }
         public List<String> getChet(List<string> input) {
             List<string> result = new List<string>();
             int listLenght = input.Count();
