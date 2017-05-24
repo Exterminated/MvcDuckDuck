@@ -12,11 +12,12 @@ namespace MvcDuckDuck.Models
         public List<string> getRequestResults() { return requestResults; }
         public void setRequestResults(List<string> input) {
             requestResults.Clear();
-            IParser iparser = new IParser();
+            Parsing iparser = new Parsing();
             int countResults = input.Count();
 
-            //if (maxRecords <= countResults) { requestResults = input.GetRange(0, maxRecords); }
+            if (maxRecords <= countResults) { requestResults = input.GetRange(0, maxRecords); }
             if (maxRecords <= countResults) { requestResults = iparser.getChet(input); }
+
             else requestResults = input;            
         }        
         
